@@ -59,6 +59,8 @@ import { useState } from 'react';
 import Step1_AddMembers from './components/Step1_AddMembers';
 import Step2_AddExpenses from './components/Step2_AddExpenses';
 import Step3_SettleUp from './components/Step3_SettleUp';
+import Progress_Bar from './components/Progress_Bar';
+import logo from './assets/logo.PNG'
 
 function App() {
   const [step, setStep] = useState(1);
@@ -67,7 +69,12 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gray-100 p-6">
-      <h1 className="text-3xl font-bold mb-6">💸 OweMe</h1>
+      <div className="flex items-center gap-3 mb-6">
+  <img src={logo} alt="OweMe logo" className="w-9 h-9" />
+  <h1 className="text-3xl font-bold">OweMe</h1>
+</div>
+
+      <Progress_Bar currentStep={step} onBack={() => setStep(step - 1)} />
 
       {step === 1 && (
         <Step1_AddMembers
