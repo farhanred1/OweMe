@@ -25,7 +25,7 @@ export default function Step1_AddMembers({ members, setMembers, onNext }) {
 
 	return (
 		<div className="bg-white p-6 rounded-xl shadow max-w-md mx-auto space-y-6">
-			<h2 className="text-2xl font-semibold text-center">Step 1: Add Members</h2>
+			<h2 className="text-2xl font-semibold text-center">Step 1: Add Membersssssss</h2>
 
 			<div className="flex gap-2">
 				<input
